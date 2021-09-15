@@ -1,3 +1,3 @@
 Gachimuchi                        
 
-Step bro I'm stuck
+Step bro I'm stuck, can you help me?
