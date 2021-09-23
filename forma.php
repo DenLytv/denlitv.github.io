@@ -105,7 +105,29 @@ setInterval(clockPainting, 1000); }
             <hr>
 
 </td>
-<td width="70%">
+<td width="70%" background="images/bg.jpg" valign='top'><font size="5">
+    <hl align="center">Список зареєстрованих !</hl>;
+    <TABLE align="center" border="1" width="600">
+        <tr>
+            <td align="center"><b>Прізвище</b></td>
+            <td align="center"><b>Ім'я</b></td>
+            <td align="center"><b>E-mail</b></td>
+            <td align="center"><b>Пароль</b></td>
+    </tr>
+    <?php
+    $data = file("baza.txt");
+    foreach ($data as $line){
+        $trs = explode(";",$line);
+        echo '<tr>';
+        echo '<tr>'.$trs[0].'</td>';
+
+        echo '<tr>'.$trs[1].'</td>';
+        echo '<tr>'.$trs[2].'</td>';
+        echo '<tr>'.$trs[3].'</td>';
+        echo '</tr>';
+    }
+    ?>
+    </table>';
 <hl align="center">Дякуємо за реєстрацію !</hl>
 <?php
 $st = $_POST['name2'].";".$_POST['name1'].";".$_POST['nici'].";".$_POST['email'].";".$_POST['password']."n";
